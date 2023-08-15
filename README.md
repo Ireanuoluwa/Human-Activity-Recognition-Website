@@ -21,15 +21,19 @@ This project focuses on classifying human activities using sensor data. It emplo
 ```
 git clone https://github.com/Ireanuoluwa/Human-Activity-Recognition-Website.git
 ```
-3. Install the required dependencies using:
+2. Install the required dependencies using:
 ```
 pip install -r requirements.txt
 ```
-5. Start the Django development server:
+3. Change the directory to predictionsite
+```
+cd predictionsite
+```
+4. Start the Django development server:
 ```
 python manage.py runserver
 ```
-7. Access the project in your web browser at
+5. Access the project in your web browser at
 ```
 http://localhost:8000.
 ```

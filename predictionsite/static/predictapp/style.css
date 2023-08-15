@@ -1,0 +1,78 @@
+/* styles.css */
+
+/* Set basic styling for the entire page */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Background color for the body */
+}
+
+/* Style for the fixed navigation bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Place the navbar on top of other elements */
+}
+
+/* Style for the text inside the navbar */
+.navbar-brand {
+    display: block;
+    text-align: center;
+    color: plum; /* Text color */
+    font-weight: bold;
+    width: 100%; /* Ensure the text takes up the full width of the navbar */
+}
+
+/* Style for the container holding the upload section */
+.upload-container {
+    text-align: center;
+    margin-top: 60px; /* Create space below the navbar */
+    padding: 20px;
+    background-color: #fff; /* Background color for the container */
+}
+
+/* Style for the upload box */
+.upload-box {
+    text-align: center;
+    padding: 2px;
+    border: 2px dashed #ccc; /* Dashed border style */
+    background-image: url("profilepic.jpg"); /* Path to your default image */
+    background-size: contain; /* Scale the background image */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 600px;
+    max-width: 400px; /* Limit the maximum width */
+    margin: 0 auto; /* Center the box horizontally */
+}
+
+/* Style for the button inside the upload box */
+.upload-box button {
+    margin-top: 550px; /* Add space between box and button */
+    background-color: #007bff; /* Button background color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Style for centering images */
+.center-image {
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+    height: 300px; /* Set image height as needed */
+}
+
+/* Style for individual result items */
+.result-item {
+    text-align: center; /* Centerize the contents horizontally */
+}
+
+/* Style for predicted class text */
+.predicted-class {
+    font-size: 30px;
+    color: purple; /* Text color */
+    font-weight: bold;
+}

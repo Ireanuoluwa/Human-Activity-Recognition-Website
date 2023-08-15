@@ -1,0 +1,21 @@
+{% extends 'predictapp/base.html' %}
+
+{% block body %}
+
+<head>
+    <h3>Uploaded Images List</h3>
+</head>
+<body>
+    <h3>Uploaded Images and their predictions</h3>
+    <ul>
+        {% for uploaded_image in uploaded_images %}
+        
+            <img src="{{ uploaded_image.image.url }}" alt="Uploaded Image">
+            <p>Predicted Class: {{ uploaded_image.predicted_class }}</p>
+            
+        
+        {% endfor %}
+    </ul>
+</body>
+{% endblock %} 
+

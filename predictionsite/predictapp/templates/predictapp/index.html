@@ -1,0 +1,37 @@
+{% extends 'predictapp/base.html' %}
+<!-- This line indicates that this template extends the 'base.html' template from the 'predictapp' app. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Include the jQuery library for JavaScript functionality. -->
+    <script
+        src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    {% block body %}
+    <!-- Define a block named 'body' that can be overridden by child templates. -->
+    <div class="upload-container">
+        <h3>Upload an Image</h3>
+        <div class="upload-box">
+            <!-- Start the form for image upload. -->
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <!-- Include the CSRF token for form submission security. -->
+                {{ form.as_p }}
+                <!-- Render form fields as paragraphs (p elements). -->
+                <button type="submit">Predict</button>
+                <!-- Add a submit button for the form. -->
+            </form>
+            <!-- End of the form. -->
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

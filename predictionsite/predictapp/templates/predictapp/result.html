@@ -1,0 +1,29 @@
+{% extends 'predictapp/base.html' %}  <!-- Extending from the base template -->
+
+{% block body %}  <!-- Start of the block named 'body' -->
+<div class="center-container">
+    <h1>Uploaded Images List</h1>  <!-- Heading for the list of uploaded images -->
+    <ul>
+        {% for uploaded_image in uploaded_images %}  <!-- Loop through each uploaded image in the context variable -->
+        <body>  <!-- This line is unnecessary and can be removed -->
+            <div class="result-item">
+                <img id="result_picture" src="{{ uploaded_image.image.url }}" alt="Uploaded Image" class="center-image">  <!-- Display the uploaded image -->
+                <p class="predicted-class">Predicted class: {{ uploaded_image.predicted_class }}</p>  <!-- Display the predicted class for the image -->
+                <a href="{% url 'image_list' %}">View All Uploaded Images</a>
+            </div>
+            
+        </body>  
+        {% endfor %}  <!-- End of the for loop -->
+    </ul>
+</div>
+{% endblock %}  <!-- End of the block named 'body' -->
+
+
+
+
+
+
+
+
+
+
